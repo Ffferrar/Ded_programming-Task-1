@@ -25,12 +25,12 @@ int SolvingEquation(double a, double b, double c, double* x1,double* x2){
     assert (x1 != NULL);
     assert (x2 != NULL);
     assert (x1 != x2);
-    if (a==0 || (a<0.00001 && a>(-0.00001) ))
+    if (IsZero(a,0) || (a<0.00001 && a>(-0.00001) ))
     {
-        if (b==0)
+        if (IsZero(b,0))
           {
 
-          if (c==0)
+          if (IsZero(c,0))
             {
             return INFINITE_NROOTS;
             }
@@ -59,7 +59,7 @@ int SolvingEquation(double a, double b, double c, double* x1,double* x2){
             return 0;
             }
 
-        if (discr==0)           // ZERO DISCRIMINANT
+        if (IsZero(discr,0))           // ZERO DISCRIMINANT
             {
             *x1=(-b)/(2*a);
             return 1;

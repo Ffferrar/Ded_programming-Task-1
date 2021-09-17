@@ -42,14 +42,14 @@ void test_printer (double a, double b, double c,int right_num_roots, double *roo
     double x1 = 0, x2 = 0;
     int nroots = SolvingEquation (a, b, c, &x1, &x2);
 
-    if (nroots==right_num_roots)                    // Если количество корней совпадает, проверяем на их равенство
+    if (nroots==right_num_roots)                    // Р•СЃР»Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РєРѕСЂРЅРµР№ СЃРѕРІРїР°РґР°РµС‚, РїСЂРѕРІРµСЂСЏРµРј РЅР° РёС… СЂР°РІРµРЅСЃС‚РІРѕ
     {
         switch(nroots)
         {
             case 0: printf("Test #%d passed\n", testnum);
                     break;
 
-            case 1: if (x1==roots[0])
+            case 1: if (IsZero(x1,roots[0]))
                     {
                         printf("Test #%d passed\n", testnum);
                     }
@@ -59,7 +59,7 @@ void test_printer (double a, double b, double c,int right_num_roots, double *roo
                     }
                     break;
 
-            case 2: if ( (x1==roots[0] && x2==roots[1]) || (x2==roots[0] && x1==roots[1]) )
+            case 2: if ( (IsZero(x1,roots[0]) && IsZero(x2,roots[1])) || (IsZero(x2,roots[0]) && IsZero(x1,roots[1])) )
                     {
                         printf("Test #%d passed\n", testnum);
                     }
@@ -76,7 +76,7 @@ void test_printer (double a, double b, double c,int right_num_roots, double *roo
         }
     }
 
-    else                              // если количество корней разное, то смотрим каждый случай отдельно. Не знаю, как упростить решение
+    else                              // РµСЃР»Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РєРѕСЂРЅРµР№ СЂР°Р·РЅРѕРµ, С‚Рѕ СЃРјРѕС‚СЂРёРј РєР°Р¶РґС‹Р№ СЃР»СѓС‡Р°Р№ РѕС‚РґРµР»СЊРЅРѕ. РќРµ Р·РЅР°СЋ, РєР°Рє СѓРїСЂРѕСЃС‚РёС‚СЊ СЂРµС€РµРЅРёРµ
     {
         switch(right_num_roots)
         {

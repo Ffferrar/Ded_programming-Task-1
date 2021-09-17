@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Double_comparing.cpp" />
 		<Unit filename="SquareSolver.cpp" />
 		<Unit filename="UnitTests.cpp" />
 		<Unit filename="defines.h" />

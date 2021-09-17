@@ -49,7 +49,7 @@ void test_printer (double a, double b, double c,int right_num_roots, double *roo
             case 0: printf("Test #%d passed\n", testnum);
                     break;
 
-            case 1: if (x1==roots[0])
+            case 1: if (IsZero(x1,roots[0]))
                     {
                         printf("Test #%d passed\n", testnum);
                     }
@@ -59,7 +59,7 @@ void test_printer (double a, double b, double c,int right_num_roots, double *roo
                     }
                     break;
 
-            case 2: if ( (x1==roots[0] && x2==roots[1]) || (x2==roots[0] && x1==roots[1]) )
+            case 2: if ( (IsZero(x1,roots[0]) && IsZero(x2,roots[1])) || (IsZero(x2,roots[0]) && IsZero(x1,roots[1])) )
                     {
                         printf("Test #%d passed\n", testnum);
                     }
@@ -70,9 +70,9 @@ void test_printer (double a, double b, double c,int right_num_roots, double *roo
                     break;
 
             case INFINITE_NROOTS: printf("Test #%d passed: \n", testnum);
-                    break
-            default: printf("UnitTests(): ERROR: nRoots = %d/n", nroot);
-                return 1;
+                    break;
+            default: printf("UnitTests(): ERROR: nRoots = %d/n", nroots);
+
         }
     }
 
@@ -89,8 +89,8 @@ void test_printer (double a, double b, double c,int right_num_roots, double *roo
                         case INFINITE_NROOTS:
                                 printf("Test #%d failed: Expected result: No roots \nActual result: Any number\n", testnum);
                                 break;
-                        default: printf("UnitTests(): ERROR: nRoots = %d/n", nroot);
-                        return 1;
+                        default: printf("UnitTests(): ERROR: nRoots = %d/n", nroots);
+
                   }
                   break;
 
@@ -103,8 +103,8 @@ void test_printer (double a, double b, double c,int right_num_roots, double *roo
                         case INFINITE_NROOTS:
                                 printf("Test #%d failed: Expected result: %f \nActual result: Any number\n", testnum, roots[0]);
                                 break;
-                        default: printf("UnitTests(): ERROR: nRoots = %d/n", nroot);
-                        return 1;
+                        default: printf("UnitTests(): ERROR: nRoots = %d/n", nroots);
+
                   }
                   break;
 
@@ -117,8 +117,7 @@ void test_printer (double a, double b, double c,int right_num_roots, double *roo
                         case INFINITE_NROOTS:
                                 printf("Test #%d failed: Expected result: %f %f \nActual result: Any number\n", testnum, roots[0], roots[1]);
                                 break;
-                        default: printf("UnitTests(): ERROR: nRoots = %d/n", nroot);
-                        return 1;
+                        default: printf("UnitTests(): ERROR: nRoots = %d/n", nroots);
                   }
                   break;
 
@@ -132,10 +131,10 @@ void test_printer (double a, double b, double c,int right_num_roots, double *roo
                         case 2:
                                 printf("Test #%d failed: Expected result: Any number \nActual result: %f %f\n", testnum, x1, x2);
                                 break;
+                        default: printf("UnitTests(): ERROR: nRoots = %d/n", nroots);
                   }
                   break;
-          default: printf("UnitTests(): ERROR: nRoots = %d/n", nroot);
-                return 1;
+          default: printf("UnitTests(): ERROR: nRoots = %d/n", nroots);
         }
 
 
