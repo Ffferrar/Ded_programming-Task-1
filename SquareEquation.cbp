@@ -32,7 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="SquareSolver.cpp" />
+		<Unit filename="UnitTests.cpp" />
+		<Unit filename="defines.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="unittest.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

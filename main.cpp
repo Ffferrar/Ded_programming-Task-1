@@ -1,90 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>      // для assert
-#include <math.h>       // для isfinite
+#include <assert.h>      // for assert
+#include <math.h>       // for isfinites
+
+#include "defines.h"  // for global variables
+#include "unittest.h" // for my functions
+
 
 /* The squire equations solver function
 
-   @version Vers 1.0
+   @version Vers 2.0
    @date 09. 09. 2021
 
    @brief Solving task #1 for the course "Professional Programming"
 
-   @param [in] a  a-coefficient
-   @param [in] b  b-coefficient
-   @param [in] c  c-coefficient
-   @param [out] x1 x1-coefficient
-   @param [out] x2 x2-coefficient
-
-   @return Number of roots
 
 */
 
 
-#include "defines.h"
-#include "unittest.h"
-
-int SolvingEquation(double a, double b, double c, double* x1,double* x2){
-
-    assert (isfinite (a));
-    assert (isfinite (b));
-    assert (isfinite (c));
-
-    assert (x1 != NULL);
-    assert (x2 != NULL);
-    assert (x1 != x2);
-    if (a==0 || (a<0.00001 && a>(-0.00001) ))
-    {
-        if (b==0)
-          {
-
-          if (c==0)
-            {
-            return INFINITE_NROOTS;
-            }
-          else
-            {
-            return 0;
-            }
-
-          }
-
-        else
-          {
-          *x1=-c/b;
-          return 1;
-          }
-
-    }
-
-    else
-        {
-        double discr= b*b-4*a*c;
-
-
-        if (discr<0)            // NEGATIVE DISCRIMINANT
-            {
-            return 0;
-            }
-
-        if (discr==0)           // ZERO DISCRIMINANT
-            {
-            *x1=(-b)/(2*a);
-            return 1;
-            }
-
-        if (discr>0)            // POSITIVE DISCRIMINANT
-            {
-            double dsqrt = sqrt(discr);
-
-            *x1 = (-b-dsqrt) / (2*a);
-            *x2 = (-b+dsqrt) / (2*a);
-
-            return 2;
-            }
-        }
-
-}
 
 
 int main()

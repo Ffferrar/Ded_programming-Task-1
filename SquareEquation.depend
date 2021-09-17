@@ -1,14 +1,16 @@
 # depslib dependency file v1.0
-1631866753 source:c:\users\trying python\desktop\профессиональное программирование дединского\squareequation\unittests.cpp
+1631900102 source:c:\users\trying python\desktop\профессиональное программирование дединского\squareequation\unittests.cpp
 	<stdio.h>
+	<stdlib.h>
 	"unittest.h"
+	<math.h>
 	"defines.h"
 
-1631866753 c:\users\trying python\desktop\профессиональное программирование дединского\squareequation\unittest.h
+1631867882 c:\users\trying python\desktop\профессиональное программирование дединского\squareequation\unittest.h
 
 1631866753 c:\users\trying python\desktop\профессиональное программирование дединского\squareequation\defines.h
 
-1631866901 source:c:\users\trying python\desktop\профессиональное программирование дединского\squareequation\main.cpp
+1631867815 source:c:\users\trying python\desktop\профессиональное программирование дединского\squareequation\main.cpp
 	<stdio.h>
 	<stdlib.h>
 	<assert.h>
@@ -16,5 +18,11 @@
 	"defines.h"
 	"unittest.h"
 
-1631866976 source:c:\users\trying python\desktop\профессиональное программирование дединского\squareequation\squaresolver.cpp
+1631868085 source:c:\users\trying python\desktop\профессиональное программирование дединского\squareequation\squaresolver.cpp
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	<math.h>
+	"defines.h"
+	"unittest.h"
 

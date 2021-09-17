@@ -6,14 +6,12 @@
 #include "defines.h"
 #include "unittest.h"
 
-/*
-    The Squire Equation SOlving function
-    @param [in] a  a-coefficient
-    @param [in] b  b-coefficient
-    @param [in] c  c-coefficient
-    @param [out] x1 x1-root
-    @param [out] x2 x2-root
-    @return Number of roots
+/* @param [in] a  a-coefficient
+   @param [in] b  b-coefficient
+   @param [in] c  c-coefficient
+   @param [out] x1 x1-root
+   @param [out] x2 x2-root
+   @return Number of roots   
 */
 
 int SolvingEquation(double a, double b, double c, double* x1,double* x2){
