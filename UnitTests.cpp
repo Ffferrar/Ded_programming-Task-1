@@ -4,7 +4,7 @@
 #include <math.h>
 #include "defines.h"
 
-/*
+/**
     Unit-test function
     @return Information about tests
 

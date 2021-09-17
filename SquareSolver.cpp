@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>      // для assert
-#include <math.h>       // для isfinite
+#include <assert.h>      // РґР»СЏ assert
+#include <math.h>       // РґР»СЏ isfinite
 
 #include "defines.h"
 #include "unittest.h"
 
-/*
+/**
     The Squire Equation SOlving function
     @param [in] a  a-coefficient
     @param [in] b  b-coefficient

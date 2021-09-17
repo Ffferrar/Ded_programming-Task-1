@@ -7,7 +7,7 @@
 #include "unittest.h" // for my functions
 
 
-/* The squire equations solver function
+/** The squire equations solver function
 
    @version Vers 2.0
    @date 09. 09. 2021
